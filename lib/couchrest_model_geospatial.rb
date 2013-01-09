@@ -11,13 +11,11 @@ module CouchRest
           spatial[name.to_s] = function
         end
       end
-      module ClassMethods
-        class DesignMapper
+      class DesignMapper
 
-          # Add the specified spatial view to the design doc. (geocouch)
-          def spatial(name, opts = {})
-            design_doc.create_spatial(name, opts)
-          end
+        # Add the specified spatial view to the design doc. (geocouch)
+        def spatial(name, opts = {})
+          design_doc.create_spatial(name, opts)
         end
       end
     end
